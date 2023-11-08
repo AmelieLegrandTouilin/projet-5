@@ -15,4 +15,15 @@ const slides = [
 		"image":"slide4.png",
 		"tagLine":"Autocollants <span>avec découpe laser sur mesure</span>"
 	}
-]
+	]
+	const leftArrow = document.querySelector('.left-arrow');
+	const rightArrow = document.querySelector('.right-arrow');
+	
+	leftArrow.addEventListener('click', function() {
+	  console.log('Clic sur le bouton gauche');
+	});
+	
+	rightArrow.addEventListener('click', function() {
+	  console.log('Clic sur le bouton droit');
+	});
+	
