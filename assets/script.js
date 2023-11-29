@@ -41,12 +41,17 @@ rightArrow.addEventListener("click",() => {
 	console.log (tagLine);
 	index++;
 	if (index >slides.length -1) {
-		index=0
+		index=0;
 	};
 	image.src='./assets/images/slideshow/'+slides[index].image;
 	tagLine.innerHTML=slides[index].tagLine;
-	dots.children[index].classList.add ('dot_selected');
-	dots.children[index-1].classList.remove ('dot_selected');
+	for (let i = 0; i < dots.children.length; i++) {
+        if (i === index) {
+            dots.children[i].classList.add('dot_selected');
+        } else {
+            dots.children[i].classList.remove('dot_selected');
+        }
+    }
 });
 
 
@@ -67,6 +72,7 @@ leftArrow.addEventListener("click",() => {
             dots.children[i].classList.remove('dot_selected');
         }
     }
+	
 });
  
 
